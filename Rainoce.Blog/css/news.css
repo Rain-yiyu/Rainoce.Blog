@@ -1,0 +1,172 @@
+@font-face {
+	font-family: "Abn";
+	src: url("../fonts/AbN.ttf");
+}
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+body{
+	background-color: #9db8b1;
+	font-family: Abn;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.Banner{
+	/* border: 1px #619c69 solid; */
+	/* border-radius: 8px; */
+	margin:0 auto;
+	margin-top: 10px;
+	width: 1200px;
+	height: 52px;
+/* 	background-image: url("../img/banner01.jpg"); */
+}
+.logo{
+	border: 1px #619c69 solid;
+	border-radius: 35px;
+	float: left;
+	width: 285px;
+	height: 50px;
+}
+.logoimg{
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.logotxt{
+	float: left;
+	width: 230px;
+	height: 50px;
+	line-height: 50px;
+	color: #619c69;
+	font-size: 25px;
+}
+.nav{
+	width: 400px;
+	height: 50px;
+	line-height: 53px;
+	float: right;
+	margin:0 auto;
+	text-align:center;
+}
+.nav ul{
+	list-style: none;
+	display:inline;
+}
+.nav ul li{
+	margin-left: 18px;
+	border: 1px #619c69 solid;
+	color: black;
+	border-radius: 35px;
+	width: 80px;
+	height: 50px;
+	text-align: center;
+	float:left;
+}
+.nav ul li a{
+	/* border: red 1px solid; */
+	border-radius: 25px;
+	display: inline-block;
+	width: 40%;
+	transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.nav ul li:hover a{
+	background-color: #619c69;
+	width: 100%;
+	color: white;
+}
+a:active{
+	background-color: #619c69;
+	width: 100%;
+	color: white;
+}
+.content{
+	border: 2px #619c69 solid;
+	border-radius: 15px;
+	width: 1200px;
+	height: 750px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.news{
+	border: #619c69 solid 1px;
+	border-radius: 15px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 391px;
+	height: 365px;
+	position: relative;
+	/* 开启3d */
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    /* 内容居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 开启3d */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* 3D模式下隐藏所有翻转的信息 */
+    backface-visibility: hidden;
+    transition: transform .7s ease-in-out;
+}
+#fr1{
+    background-image: linear-gradient(to right, #619c6964,#619c6964),url("../img/news1.jpg");
+}
+#fr2{
+	background-image:linear-gradient(to right, #619c6964,#619c6964),url("../img/news2.jpg");
+}
+#fr3{
+	background-image:linear-gradient(to right, #619c6964,#619c6964),url("../img/news3.jpg");
+}
+#fr4{
+	background-image:linear-gradient(to right, #619c6964,#619c6964),url("../img/news4.jpg");
+}
+#fr5{
+	background-image:linear-gradient(to right, #619c6964,#619c6964),url("../img/news5.jpg");
+}
+#fr6{
+	background-image:linear-gradient(to right, #619c6964,#619c6964),url("../img/news6.jpg");
+}
+.back{
+    background-image: linear-gradient(to right, #619c69,#619c69);
+    transform: rotateY(180deg);
+}
+.contents{
+    /* 形成文字与背景分离 */
+    transform: translateZ(60px);
+}
+.contents p{
+	width: 200px;
+	text-indent: 2em;
+}
+.news:hover .front{
+    transform: rotateY(-180deg);
+}
+.news:hover .back{
+    transform: rotateY(0deg);
+}
+.bottom{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+	margin-top: 10px;
+	line-height: 120px;
+	text-align: center;
+	border: #619c69 2px solid;
+	border-radius: 15px;
+}
